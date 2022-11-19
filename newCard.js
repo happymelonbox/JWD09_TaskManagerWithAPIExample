@@ -1,4 +1,14 @@
 function createNewCard(obj){
+      let column;
+      if (obj.status === "tasksStatusToDo"){
+        column = "tasksStatusToDo"
+      } else if (obj.status === "tasksStatusWorking"){
+        column = "tasksStatusWorking"
+      } else if (obj.status === "tasksStatusInReview"){
+        colummn = "tasksStatusInReview"
+      } else if (obj.status === "tasksStatusDone"){
+        column = "tasksStatusDone"
+      }
     const cardContainer = document.getElementById("currentTasksContainer")
     const newCard = cardContainer.appendChild(document.createElement("div"))
     newCard.setAttribute("class", "card")
