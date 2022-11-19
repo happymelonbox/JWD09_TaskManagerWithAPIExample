@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 html{
   font-size: 12px;
+  height: 930px;
 }
 .navbar{
     background-color:aliceblue
@@ -87,18 +88,22 @@ h4{
     width: 100%;
 }
 
-.cards{
-    width: 100%;
+.card{
+    width: 15%;
+    display: block;
+    float: left;
     border: 2px solid darkcyan;
     overflow: scroll;
-    height: 190px;
-    margin-top: 5%;
+    text-align: center;
+    margin: 2%;
+    height: 247px;
 }
 
 .taskCardButtons{
     background-color: darkcyan;
     color: aliceblue;
     border: none;
+    margin: 5%;;
     width: 25%;
 }
 

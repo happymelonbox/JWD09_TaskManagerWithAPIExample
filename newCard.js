@@ -6,7 +6,7 @@ function createNewCard(obj){
     newCardBody.setAttribute("class", "card-body")
     const cardTitle = newCardBody.appendChild(document.createElement("h5"))
     cardTitle.setAttribute("class", "card-title")
-    cardTitle.innerHTML = `${obj.cardTitle}`
+    cardTitle.innerHTML = `${obj.title}`
     const cardDueDate = newCardBody.appendChild(document.createElement("h6"))
     cardDueDate.setAttribute("class", "card-subtitle")
     cardDueDate.setAttribute("class", "mb-2")
@@ -33,8 +33,10 @@ function createNewCard(obj){
     cardPodName.setAttribute("class", "text-muted")
     cardPodName.innerHTML = `Description: ${obj.pod_name}`
     const deleteButton = newCardBody.appendChild(document.createElement("button"))
+    deleteButton.setAttribute("class", "taskCardButtons")
     deleteButton.innerHTML = "Delete"
     const editButton = newCardBody.appendChild(document.createElement("button"))
+    editButton.setAttribute("class", "taskCardButtons")
     editButton.innerHTML = "Edit"
 }
 

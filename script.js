@@ -11,7 +11,6 @@ function bodyFunction(){
     })
 
     let tasks = localStorage.getItem("tasks")
-    const taskContainer = document.getElementById("currentTasksContainer")
 
     JSON.parse(tasks).map(task => {
         createNewCard(task)
