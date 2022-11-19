@@ -11,19 +11,23 @@ class TaskManager {
     }
 
     saveNewTask(){
-        fetch('https://jwd09-task-api.herokuapp.com/api/v1/tasks', {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(this),
-        })
-        .then(response =>
-            console.log('Success:', response)
-        )
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+        if (this.pod_name === "Podlet of fire" || this.pod_name === "Dreamchasers" || this.pod_name === "Code Den"){
+            fetch('https://jwd09-task-api.herokuapp.com/api/v1/tasks', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(this),
+            })
+            .then(response =>
+                console.log('Success:', response)
+            )
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        } else {
+            console.log("Your pod name is incorrect")
+        }
     }
 
     updateTask(obj){
