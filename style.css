@@ -19,13 +19,13 @@ html{
 
 .buttons {
     right: 5%;
-  }
+}
 
 #newTaskBtn{
     background-color: darkcyan;
     color: aliceblue;
     border: none;
-  }
+}
 
 #newTaskBtn:hover {
     opacity: 0.8;
@@ -48,11 +48,11 @@ html{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
 
 .currentTasksContainer{
     margin-top: 5%;
-  }
+}
 
 .taskColumns{
     display: grid;
@@ -60,15 +60,15 @@ html{
     grid-gap: 1%;
     text-align: center;
     margin: 2% 5%;
-  }
+}
 
 .columns{
     text-align: center;
-  }
+}
 
 h4{
     margin: 0;
-  }
+}
 
 .columnHeaders{
     width: 25%;
@@ -81,11 +81,11 @@ h4{
     padding-bottom: 0.5rem;
     border: 1px solid aliceblue;
     border-radius: 4px;
-  }
+}
 
 .columnCardBody{
     width: 100%;
-  }
+}
 
 .cards{
     width: 100%;
@@ -93,13 +93,13 @@ h4{
     overflow: scroll;
     height: 190px;
     margin-top: 5%;
-  }
+}
 
 .taskCardButtons{
     background-color: darkcyan;
     color: aliceblue;
     border: none;
     width: 25%;
-  }
+}
 
 
