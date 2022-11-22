@@ -1,3 +1,5 @@
+import deleteFunction from './deleteFunction.js'
+
 function createNewCard(obj){
   let column = ""
   if (obj.status.toLowerCase() === "to do"){
@@ -9,8 +11,6 @@ function createNewCard(obj){
   } else if (obj.status.toLowerCase() === "done"){
    column = "tasksStatusDone"
   }
-  console.log(column)
-  
   const cardContainer = document.getElementById(column)
   const newCard = cardContainer.appendChild(document.createElement("div"))
   newCard.setAttribute("class", "card")
@@ -47,6 +47,7 @@ function createNewCard(obj){
   const deleteButton = newCardBody.appendChild(document.createElement("button"))
   deleteButton.setAttribute("class", "taskCardButtons")
   deleteButton.innerHTML = "Delete"
+  deleteButton.addEventListener("click", () => deleteFunction(obj))
   const editButton = newCardBody.appendChild(document.createElement("button"))
   editButton.setAttribute("class", "taskCardButtons")
   editButton.innerHTML = "Edit"
