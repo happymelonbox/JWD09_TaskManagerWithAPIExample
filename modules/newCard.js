@@ -53,8 +53,8 @@ function createNewCard(obj){
   const editButton = newCardBody.appendChild(document.createElement("button"))
   editButton.setAttribute("class", "taskCardButtons")
   editButton.innerHTML = "Edit"
-  editButton.setAttribute("data-toggle","editModal")
-  editButton.setAttribute("data-target", "#myEditModal")
+  editButton.setAttribute("data-toggle","modal")
+  editButton.setAttribute("data-target", "#myModal")
   editButton.addEventListener("click", () => editButton(obj))
 }
 
