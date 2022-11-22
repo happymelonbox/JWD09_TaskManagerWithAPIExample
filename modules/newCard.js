@@ -45,6 +45,7 @@ function createNewCard(obj){
   cardPodName.setAttribute("class", "mb-2")
   cardPodName.setAttribute("class", "text-muted")
   cardPodName.innerHTML = `Pod Name: ${obj.pod_name}`
+  // refactor the above into a function (code smell)
   const deleteButton = newCardBody.appendChild(document.createElement("button"))
   deleteButton.setAttribute("class", "taskCardButtons")
   deleteButton.innerHTML = "Delete"
@@ -52,8 +53,8 @@ function createNewCard(obj){
   const editButton = newCardBody.appendChild(document.createElement("button"))
   editButton.setAttribute("class", "taskCardButtons")
   editButton.innerHTML = "Edit"
-  editButton.setAttribute("data-toggle","modal")
-  editButton.setAttribute("data-target", "#myModal")
+  editButton.setAttribute("data-toggle","editModal")
+  editButton.setAttribute("data-target", "#myEditModal")
   editButton.addEventListener("click", () => editButton(obj))
 }
 
