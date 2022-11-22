@@ -1,7 +1,7 @@
 import TaskManager from "./TaskManager.js";
 import createNewCard from "./newCard.js";
 
-window.addEventListener('load', bodyFunction)
+window.addEventListener('load', ()=>bodyFunction())
 
 function bodyFunction(){
     fetch("https://jwd09-task-api.herokuapp.com")

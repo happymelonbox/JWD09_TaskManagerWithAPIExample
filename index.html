@@ -21,13 +21,17 @@
     </nav>
 
     <div id="currentTasksContainer">
-        <div id="tasksStatusToDo">
+        <div class="tasks" id="tasksStatusToDo">
+            <h4>To Do</h4>
         </div>
-        <div id="tasksStatusWorking">
+        <div class="tasks" id="tasksStatusWorking">
+            <h4>Working</h4>
         </div>
-        <div id="tasksStatusInReview">
+        <div class="tasks" id="tasksStatusInReview">
+            <h4>In Review</h4>
         </div>
-        <div id="tasksStatusDone">
+        <div class="tasks" id="tasksStatusDone">
+            <h4>Done</h4>
         </div>
     </div>
     <div class="modal" id="myModal">
@@ -40,14 +44,14 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <label for="Task">Name</label>
-                    <input type="text" class="Task" id="Task" name="Task">
+                    <label for="Title">Title</label>
+                    <input type="text" class="Task" id="Title" name="Task">
                     <br>
                     <label for="Des">Description:</label>
                     <input type="textarea" class="des" id="des" name="des">
                     <br>
                     <label for="assto">Assigned To</label>
-                    <select class="selectpicker">
+                    <select class="selectpicker" id="assto">
                         <option></option>
                         <option>Malathi</option>
                         <option>Goma</option>
@@ -58,10 +62,10 @@
                     <label for="Due date">Due date:</label>
                     <input type="date" id="dd" name="dd">
                     <br>
-                    <label for="Situation">Status</label>
-                    <select class="Whatgoon">
+                    <label for="Status">Status</label>
+                    <select class="Whatgoon" id="status">
                         <option></option>
-                        <option>ToDo</option>
+                        <option>To Do</option>
                         <option>In Proress</option>
                         <option>Review</option>
                         <option>Done</option>
