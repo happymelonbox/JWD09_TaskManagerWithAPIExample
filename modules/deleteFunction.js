@@ -6,11 +6,15 @@ function deleteFunction(obj){
          'Content-type': 'application/json; charset=UTF-8'
         },
        })
-    .then(resp => console.log(resp))
-    .then(info => {
+    .then((response) => response.json())
+    .then((data) => {
+        console.log('Success:', data)
         alert("Deleted!")
         location.reload()
-    })
+        })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 
 }
 

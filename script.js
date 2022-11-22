@@ -1,5 +1,6 @@
-import TaskManager from "./TaskManager.js";
-import createNewCard from "./newCard.js";
+import TaskManager from "./classes/TaskManager.js";
+import createNewCard from "./modules/newCard.js";
+
 
 window.addEventListener('load', ()=>bodyFunction())
 
