@@ -1,5 +1,5 @@
 import deleteFunction from './deleteFunction.js'
-import openModal from './openModal.js'
+import addValuesToModal from './addValuesToModal.js'
 
 function createNewCard(obj){
   let column = ""
@@ -55,7 +55,7 @@ function createNewCard(obj){
   editButton.innerHTML = "Edit"
   editButton.setAttribute("data-toggle","modal")
   editButton.setAttribute("data-target", "#myModal")
-  editButton.addEventListener("click", () => editButton(obj))
+  editButton.addEventListener("click", () => addValuesToModal(obj))
 }
 
   export default createNewCard
