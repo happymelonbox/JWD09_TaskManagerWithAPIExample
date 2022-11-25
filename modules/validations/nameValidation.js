@@ -1,15 +1,16 @@
 function nameValidation(){
-    const name = document.getElementById("Title").value
-    const errorH = document.createElement("h4")
-    if (name === ""){
+    const name = document.getElementById("Title")
+    const errorH = document.createElement("h6")
+    errorH.setAttribute("class", "errors")
+    if (name.value === ""){
         errorH.innerHTML = `Please add a title`
-        name.insertAdjacentElement('beforeend', errorH)
+        name.after(errorH)
         return false
     }
 
-    if (name.length < 5){
+    if (name.value.length < 5){
         errorH.innerHTML = `Title length must be longer than 5 characters`
-        name.insertAdjacentElement('beforeend', errorH)
+        name.after(errorH)
         return false
     }
     return true
