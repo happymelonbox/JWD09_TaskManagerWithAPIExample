@@ -1,19 +1,12 @@
-function dueDateValidation(){
-    const dueDate = document.getElementById("des")
-    const errorH = document.createElement("h6")
-    errorH.setAttribute("class", "errors")
-    if (dueDate.value === ""){
-        errorH.innerHTML = `Please add a description`
-        dueDate.after(errorH)
-        return false
-    }
+import assignedToValidation from "./assignedToValidation.js";
+import descriptionValidation from "./descriptionValidation.js";
+import nameValidation from "./nameValidation.js";
+import dueDateValidation from "./dueDateValidation.js";
 
-    if (dueDate.value.length < 15){
-        errorH.innerHTML = `Description length must be longer than 15 characters`
-        dueDate.after(errorH)
-        return false
+function validateForm(){
+    if (assignedToValidation() && descriptionValidation() && nameValidation() && dueDateValidation()){
+        return true
     }
-    return true
 }
 
-export default dueDateValidation
+export default validateForm
