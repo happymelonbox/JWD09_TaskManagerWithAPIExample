@@ -8,6 +8,12 @@ class TaskManager {
         this.date = date;
         this.status = status;
         this.pod_name = pod_name
+        
+    }
+
+    static getAllTasks(){
+        let allTasks = localStorage.getItem("tasks")
+        return JSON.parse(allTasks)
     }
 
     saveNewTask(){
